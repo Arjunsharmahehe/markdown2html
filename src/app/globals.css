@@ -24,3 +24,104 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+h4 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+h5 {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+a {
+  color: #007bff; /* Common blue color for links */
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+  color: #0056b3; /* Darker blue on hover */
+  text-decoration: underline; /* Add underline on hover for better indication */
+}
+
+a:visited {
+  color: #6610f2; /* A different color for visited links */
+}
+
+a:active {
+  color: #004085; /* Color when the link is clicked */
+}
+li {
+  line-height: 1.6; /* Improve readability with more space between lines */
+}
+ul {
+  list-style: disc; /* Default bullet style */
+  margin: 4px 0; /* Add vertical margin */
+  padding-left: 20px; /* Add left padding for the bullet points */
+}
+ol {
+  list-style: decimal; /* Default number style */
+  margin: 4px 0; /* Add vertical margin */
+  padding-left: 25px; /* Add left padding for the numbers */
+}
+blockquote {
+  margin: 1rem 8px; /* Add margin to indent the blockquote */
+  padding: 10px 20px; /* Add internal padding */
+  border-left: 2px solid #ccc; /* Add a left border as a visual indicator */
+  color: #959595; /* Slightly darker text color */
+  font-style: italic; /* Italicize the text */
+  background-color: #0a0a0a; /* Add a light background color */
+}
+
+blockquote p {
+  margin-bottom: 0; /* Remove default margin from paragraphs inside blockquote */
+}
+pre {
+  background-color: #0a0a0a; /* Light gray background */
+  color: #fafafa;
+  border: 1px solid #171717; /* Light border */
+  border-radius: 4px; /* Slightly rounded corners */
+  padding: 15px; /* Internal padding */
+  overflow-x: auto; /* Add horizontal scroll if content is too wide */
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Monospaced font */
+  font-size: 0.9em; /* Slightly smaller font size */
+  line-height: 1.5; /* Improve readability */
+  word-wrap: normal; /* Prevent word wrapping that can break code */
+}
+
+/* --- Code (code) --- */
+code {
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Monospaced font */
+  font-size: 0.9em; /* Slightly smaller font size */
+  background-color: #110000; /* Light background for inline code */
+  padding: 2px 4px; /* Small padding around inline code */
+  border-radius: 3px; /* Slightly rounded corners for inline code */
+  border: 1px solid #370101; /* Light border for inline code */
+  color: #d10000
+}
+
+/* Style code elements within pre tags specifically */
+pre code {
+  background-color: transparent; /* No background for code inside pre */
+  color: #fafafa;
+  border: none;
+  padding: 0; /* No padding for code inside pre */
+  border-radius: 0; /* No border radius for code inside pre */
+  font-size: inherit; /* Inherit font size from pre */
+}
