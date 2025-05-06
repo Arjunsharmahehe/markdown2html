@@ -1,5 +1,5 @@
 # Markdown2html
-A simple markdown to html converter. Made as a part of a bigger project of making a markdown to pdf converter
+A simple markdown to html converter. Made as a part of a bigger project of making a markdown to pdf converter.     
 **Update:** I wished to make a complete client side option, but all the client side options weren't good enough.
 
 ## Struggle
