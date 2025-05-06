@@ -1,12 +1,5 @@
-
-interface ResultsPageProps {
-    searchParams: {
-      query: string; // The name 'query' matches the ?query= part of the URL
-    };
-  }
-  
-export default async function Page({ searchParams }: ResultsPageProps) {
-    const query = await searchParams.query;
+  export default async function Page({ searchParams }: { searchParams: Promise<{ query: string }> }) {
+    const query = (await searchParams).query || '<h1>Data missing :/</h1>';
     const htmlContent = decodeURIComponent(query);
 
     return (
