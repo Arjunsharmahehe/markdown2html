@@ -1,8 +1,10 @@
 "use client"
 
 import Snackbar from "@/components/Snackbar";
+import alert from "@/lib/Alert";
 import parseMarkdownToReact from "@/lib/parseMarkdown";
-import { Copy } from "lucide-react";
+import { Copy, Download } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Page(){
@@ -58,11 +60,20 @@ export default function Page(){
       </div>
       <div className="flex flex-col w-full h-svh md:h-11/12 items-end gap-2 md:w-1/2">
         <div className="p-4 w-full h-full overflow-auto rounded-sm flex flex-col gap-1" dangerouslySetInnerHTML={{__html: htmlContent}}></div>
-          <button className="flex gap-2 px-3 py-2 rounded-sm text-neutral-50 bg-neutral-950 hover:bg-neutral-900"
-                  onClick={() => handleCopyClick(htmlContent)}>
-              <Copy className="size-6 text-neutral-50"/>
-              HTML
-          </button>
+        <div className="flex gap-2">
+            <button onClick={() => alert({message: 'Press ctrl+p to print the pdf'})}>
+              <Link href={`/pdf?query=${encodeURIComponent(htmlContent.trim())}`}
+                    className="flex gap-2 px-3 py-2 rounded-sm text-neutral-50 bg-neutral-950 hover:bg-neutral-900">
+                  <Download className="size-6 text-neutral-50"/>
+                  <span className="text-white">PDF</span>
+              </Link>
+            </button>
+            <button className="flex gap-2 px-3 py-2 rounded-sm text-neutral-50 bg-neutral-950 hover:bg-neutral-900"
+                    onClick={() => handleCopyClick(htmlContent)}>
+                <Copy className="size-6 text-neutral-50"/>
+                HTML
+            </button>
+        </div>
       </div>
       {snackbar.visible && <Snackbar snackbar={snackbar} />}
     </div>

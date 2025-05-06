@@ -64,13 +64,6 @@ a:hover {
   text-decoration: underline; /* Add underline on hover for better indication */
 }
 
-a:visited {
-  color: #6610f2; /* A different color for visited links */
-}
-
-a:active {
-  color: #004085; /* Color when the link is clicked */
-}
 li {
   line-height: 1.6; /* Improve readability with more space between lines */
 }
@@ -97,6 +90,7 @@ blockquote p {
   margin-bottom: 0; /* Remove default margin from paragraphs inside blockquote */
 }
 pre {
+  margin-top: 2px;
   background-color: #0a0a0a; /* Light gray background */
   height: fit-content;
   color: #fafafa;
