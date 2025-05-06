@@ -26,18 +26,22 @@ body {
 }
 
 h1 {
+  margin-top: 4px;
   font-size: 2rem;
   font-weight: bold;
 }
 h2 {
+  margin-top: 4px;
   font-size: 1.5rem;
   font-weight: bold;
 }
 h3 {
+  margin-top: 4px;
   font-size: 1.25rem;
   font-weight: bold;
 }
 h4 {
+  margin-top: 2px;
   font-size: 1rem;
   font-weight: bold;
 }
@@ -94,11 +98,12 @@ blockquote p {
 }
 pre {
   background-color: #0a0a0a; /* Light gray background */
+  height: fit-content;
   color: #fafafa;
   border: 1px solid #171717; /* Light border */
-  border-radius: 4px; /* Slightly rounded corners */
-  padding: 15px; /* Internal padding */
-  overflow-x: auto; /* Add horizontal scroll if content is too wide */
+  border-radius: 4px; /* Slightly rounded corners */;
+  text-wrap: wrap;
+  padding: 15px; /* Internal padding */ /* Add horizontal scroll if content is too wide */
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; /* Monospaced font */
   font-size: 0.9em; /* Slightly smaller font size */
   line-height: 1.5; /* Improve readability */
